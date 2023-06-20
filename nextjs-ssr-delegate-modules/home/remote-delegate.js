@@ -20,4 +20,9 @@ module.exports = new Promise((resolve, reject) => {
       //catching the error and rejecting it
       reject(err);
     });
+  // resolve({
+  //   init: (_) => {
+  //   },
+  //   get: (moduleName) => () => ({})
+  // })
 });

@@ -6,11 +6,15 @@
     "./shop"
   ],
   "scripts": {
-    "start": "concurrently \"cd checkout; npm run dev\" \"cd home; npm run dev\" \"cd shop; npm run dev\"",
-    "build": "concurrently \"cd checkout; npm run build\" \"cd home; npm run build\" \"cd shop; npm run build\"",
-    "serve": "concurrently \"cd checkout; npm run start\" \"cd home; npm run start\" \"cd shop; npm run start\""
+    "start:checkout": "cd checkout & npm run dev",
+    "build:checkout": "cd checkout & npm run build",
+    "start:home": "cd home & npm run dev",
+    "build:home": "cd home & npm run build"
   },
   "dependencies": {
+    "@module-federation/nextjs-mf": "^6.5.2-rc3.2",
+    "@module-federation/node": "^0.15.2-rc3.2",
+    "@module-federation/utilities": "^1.8.2-rc3.2",
     "concurrently": "^7.0.0"
   }
 }
